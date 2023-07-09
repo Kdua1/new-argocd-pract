@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-web
-        image: docker.io/cloudnat/photo-img:latest
+        image: docker.io/kdua1/app:latest
         ports:
         - containerPort: 80
           name: my-web
