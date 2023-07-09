@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: myweb-apps
   labels:
-    app: nginx
+    app: my-web
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: my-web
   template:
     metadata:
       labels:
-        app: nginx
+        app: my-web
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: my-web
+        image: docker.io/
         ports:
         - containerPort: 8080
-          name: nginx
+          name: my-web
       restartPolicy: Always   
 
 
@@ -28,10 +28,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: my-service
 spec:
   selector:
-    app: nginx
+    app: my-web
   type: ClusterIP  
   ports:
     - protocol: TCP
