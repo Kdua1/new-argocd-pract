@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: my-web
-        image: docker.io/kdua1/app:latest
+        image: docker.io/cloudnat/photo-img:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 80
           name: my-web
       restartPolicy: Always   
 
